@@ -12,6 +12,8 @@ public class Teleport : MonoBehaviour
     [SerializeField] Light areaLight;
     [SerializeField] Light mainWorldLight;
 
+    private bool _used = false;
+
     void Start() 
     {
         // CHALLENGE TIP: Make sure all relevant lights are turned off until you need them on
@@ -22,7 +24,8 @@ public class Teleport : MonoBehaviour
     {
         // Challenge 2:
         TeleportPlayer();
-        // Challenge 3: DeactivateObject();
+        // Challenge 3:
+        DeactivateObject();
         // Challenge 4: IlluminateArea();
         // Challenge 5: StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
@@ -30,6 +33,8 @@ public class Teleport : MonoBehaviour
 
     void TeleportPlayer()
     {
+        if(_used) return;
+
         var newPosition = teleportTarget.position;
         newPosition.y += 1f;
 
@@ -38,7 +43,8 @@ public class Teleport : MonoBehaviour
 
     void DeactivateObject()
     {
-       // code goes here 
+       // code goes here
+       _used = true;
     }
 
     void IlluminateArea()
