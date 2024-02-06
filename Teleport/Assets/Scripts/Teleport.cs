@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    [SerializeField] Transform teleportTarget;
+    [SerializeField] Transform[] teleportsTarget;
     [SerializeField] GameObject player;
     [SerializeField] Light areaLight;
     [SerializeField] Light mainWorldLight;
@@ -32,17 +32,26 @@ public class Teleport : MonoBehaviour
         IlluminateArea();
         // Challenge 5:
         StartCoroutine ("BlinkWorldLight");
-        // Challenge 6: TeleportPlayerRandom();
+        // Challenge 6:
+        //TeleportPlayerRandom();
     }
 
     void TeleportPlayer()
     {
         if(_used) return;
 
+        var teleportTarget = GetRandomTeleport();
         var newPosition = teleportTarget.position;
         newPosition.y += 1f;
 
         player.transform.position = newPosition;
+    }
+
+    private Transform GetRandomTeleport()
+    {
+        var teleportIndex = Random.Range(0, teleportsTarget.Length);
+
+        return teleportsTarget[teleportIndex];
     }
 
     void DeactivateObject()
@@ -65,9 +74,9 @@ public class Teleport : MonoBehaviour
         mainWorldLight.gameObject.SetActive(false);
      }
 
-    void TeleportPlayerRandom()
-    {
-        // code goes here... or you could modify one of your other methods to do the job.
-    }
+    //void TeleportPlayerRandom()
+    //{
+    //    // code goes here... or you could modify one of your other methods to do the job.
+    //}
 
 }
