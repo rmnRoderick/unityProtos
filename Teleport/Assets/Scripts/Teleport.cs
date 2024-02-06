@@ -18,6 +18,7 @@ public class Teleport : MonoBehaviour
     {
         // CHALLENGE TIP: Make sure all relevant lights are turned off until you need them on
         // because, you know, that would look cool.
+        areaLight.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other) 
@@ -26,7 +27,8 @@ public class Teleport : MonoBehaviour
         TeleportPlayer();
         // Challenge 3:
         DeactivateObject();
-        // Challenge 4: IlluminateArea();
+        // Challenge 4:
+        IlluminateArea();
         // Challenge 5: StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
     }
@@ -50,6 +52,7 @@ public class Teleport : MonoBehaviour
     void IlluminateArea()
     {
        // code goes here 
+       areaLight.gameObject.SetActive(true);
     }
 
     // IEnumerator BlinkWorldLight()
