@@ -11,6 +11,9 @@ public class Teleport : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] Light areaLight;
     [SerializeField] Light mainWorldLight;
+    
+    [SerializeField] bool _oneUse = true;
+
 
     private bool _used = false;
 
@@ -57,6 +60,7 @@ public class Teleport : MonoBehaviour
     void DeactivateObject()
     {
        // code goes here
+       if(!_oneUse) return;
        _used = true;
     }
 
