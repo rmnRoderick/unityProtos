@@ -14,11 +14,12 @@ public class Teleport : MonoBehaviour
 
     private bool _used = false;
 
-    void Start() 
+    void Start()
     {
         // CHALLENGE TIP: Make sure all relevant lights are turned off until you need them on
         // because, you know, that would look cool.
         areaLight.gameObject.SetActive(false);
+        StartCoroutine("BlinkWorldLight");
     }
 
     void OnTriggerEnter(Collider other) 
@@ -29,7 +30,8 @@ public class Teleport : MonoBehaviour
         DeactivateObject();
         // Challenge 4:
         IlluminateArea();
-        // Challenge 5: StartCoroutine ("BlinkWorldLight");
+        // Challenge 5:
+        StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
     }
 
@@ -55,10 +57,13 @@ public class Teleport : MonoBehaviour
        areaLight.gameObject.SetActive(true);
     }
 
-    // IEnumerator BlinkWorldLight()
-    // {
-            // code goes here
-    // }
+    IEnumerator BlinkWorldLight()
+    {
+        //code goes here
+        mainWorldLight.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        mainWorldLight.gameObject.SetActive(false);
+     }
 
     void TeleportPlayerRandom()
     {
