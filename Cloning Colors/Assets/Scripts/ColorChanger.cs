@@ -74,4 +74,11 @@ public class ColorChanger : MonoBehaviour
         SetColor(newColorSet);
 
     }
+    public bool IsSameColor(GameObject other)
+    {
+        var otherColor = other.GetComponent<ColorChanger>().GetCurrentColor();
+
+        return otherColor == GetCurrentColor();
+    }
+
 }

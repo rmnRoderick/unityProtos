@@ -379,6 +379,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &318853546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+  m_PrefabInstance: {fileID: 923429428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &355277542
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +468,8 @@ GameObject:
   - component: {fileID: 402648194}
   - component: {fileID: 402648193}
   - component: {fileID: 402648192}
+  - component: {fileID: 402648196}
+  - component: {fileID: 402648195}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -550,6 +557,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &402648195
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402648191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 1.28}
+  m_EdgeRadius: 0
+--- !u!114 &402648196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402648191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0fe94479f4cf14cbedb288f8cb4fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,6 +2601,10 @@ PrefabInstance:
     - target: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
       propertyPath: m_Name
       value: Gem (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
@@ -5385,6 +5434,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem
       objectReference: {fileID: 0}
+    - target: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626900650069454263, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5474496776418543824, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
       propertyPath: _currentColor
       value: 2
@@ -5425,6 +5482,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1250056721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+  m_PrefabInstance: {fileID: 1226186588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250056725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250056721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a428502ad9e08b44a3dd01e82aa09d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1472373238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5567,6 +5641,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526991454}
   m_CullTransparentMesh: 0
+--- !u!1 &1610714459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+  m_PrefabInstance: {fileID: 1657472610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1610714463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610714459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a428502ad9e08b44a3dd01e82aa09d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1657472610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5621,6 +5712,10 @@ PrefabInstance:
     - target: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
       propertyPath: m_Name
       value: Gem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626900650069454262, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5474496776418543824, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
       propertyPath: _currentColor
@@ -5884,6 +5979,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1626900650069454260, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
   m_PrefabInstance: {fileID: 923429428}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1799716794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318853546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a428502ad9e08b44a3dd01e82aa09d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2002496405
 PrefabInstance:
   m_ObjectHideFlags: 0
