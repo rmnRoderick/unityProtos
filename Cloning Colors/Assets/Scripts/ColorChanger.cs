@@ -1,6 +1,7 @@
 ﻿// GameDev.tv ChallengeClub.Got questionsor wantto shareyour niftysolution?
 // Head over to - http://community.gamedev.tv
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,6 +39,16 @@ public class ColorChanger : MonoBehaviour
 
     private void Start()
     {
-        mySpriteRenderer.color = _colorSetToColor[_currentColor];
+        SetColor(_currentColor);
+    }
+
+    public void SetColor(ColorSet newColor)
+    {
+        mySpriteRenderer.color = _colorSetToColor[newColor];
+    }
+
+    public ColorSet GetCurrentColor()
+    {
+        return _currentColor;
     }
 }
