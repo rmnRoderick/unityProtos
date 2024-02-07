@@ -1,6 +1,7 @@
 ﻿// GameDev.tv ChallengeClub.Got questionsor wantto shareyour niftysolution?
 // Head over to - http://community.gamedev.tv
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,21 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
         AllPlayerBlocksArrayUpdate();
+        
     }
+
+
 
     void Update()
     {
+
+
+        if (allPlayerBlocks.Length == 0)
+        {
+            Debug.Log("gameover");
+            return;
+        }
+
         BlockSelection();
     }
 
