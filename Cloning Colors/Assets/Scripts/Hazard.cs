@@ -18,6 +18,12 @@ public class Hazard : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Block"))
         {
+
+            if (IsSameColor(collision.gameObject))
+            {
+                return;
+            }
+
             if (collision.gameObject.GetComponent<BlockMovement>().isActiveBool)
             {
                 Destroy(collision.gameObject);
@@ -29,5 +35,12 @@ public class Hazard : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
+    }
+
+    private bool IsSameColor(GameObject block)
+    {
+        var blockColor = block.GetComponent<ColorChanger>().GetCurrentColor();
+
+        return blockColor == gameObject.GetComponent<ColorChanger>().GetCurrentColor();
     }
 }
