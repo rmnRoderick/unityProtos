@@ -18,4 +18,6 @@ public class Mover : MonoBehaviour
         transform.Translate(xValue, 0, yValue);
     }
 
+
+
 }
