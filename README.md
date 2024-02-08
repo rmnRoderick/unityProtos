@@ -5,11 +5,20 @@
   See my Unity Learn Dashboard
 </a>
 <hr>
+
 <h4>List of prototypes</h4>
-<ul>
-  <li>
-    <a href="https://play.unity.com/mg/other/webgl-builds-390046">Teleport Prototype</a>
-  </li>
-</ul>
+<a href="https://play.unity.com/mg/other/webgl-builds-390046">
+  <img src="https://play-static.unity.com/20240207/p/images/14faf6fe-a595-4cf9-82c4-9d81b42fba4e_Captura_de_pantalla_2024_02_06_211509.png" style="width:500px"/><br/>
+  Teleport
+</a>
+
+<br/>
+<br/>
+<br/>
+
+<a href="https://play.unity.com/mg/other/webgl-builds-390218" style="text-align:center">
+  <img src="https://play-static.unity.com/20240207/p/images/81a3f248-1c84-40e6-9362-9a67b18ecc5a_Captura_de_pantalla_2024_02_07_195134.png"style="width:500px" /><br/>
+  Cloning Colors
+</a>
 
 
