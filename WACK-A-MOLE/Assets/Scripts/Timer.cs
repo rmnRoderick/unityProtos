@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    Text timerText; 
-    float elapsedTime;
-    
+    Text timerText;
+    float elapsedTime = 0;
+
     void Start()
     {
         timerText = GetComponent<Text>();
@@ -15,6 +15,8 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        
+        elapsedTime += Time.deltaTime;
+
+        timerText.text = Mathf.Round(elapsedTime).ToString();
     }
 }
