@@ -9,7 +9,6 @@ public class Exploder : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            print("Aww, you got me");
             _particleSystem.transform.parent = null;
             _particleSystem.Play();
             Destroy(gameObject);

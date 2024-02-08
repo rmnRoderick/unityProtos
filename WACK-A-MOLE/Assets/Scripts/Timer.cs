@@ -13,6 +13,11 @@ public class Timer : MonoBehaviour
         timerText = GetComponent<Text>();
     }
 
+    public void Reset()
+    {
+        elapsedTime = 0;
+    }
+
     void Update()
     {
         elapsedTime += Time.deltaTime;

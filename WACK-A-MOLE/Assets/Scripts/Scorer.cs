@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scorer : MonoBehaviour
 {
@@ -18,6 +19,16 @@ public class Scorer : MonoBehaviour
         {
             celebration.Play();
             hasChildren = false;
+
+            StartCoroutine("ResetGame");
         }
     }
+
+    private IEnumerator ResetGame()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Main Game");
+
+    }
+
 }
