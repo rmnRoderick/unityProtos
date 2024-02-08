@@ -9,21 +9,29 @@ using UnityEngine;
 public class GameHandler : MonoBehaviour
 {
     [SerializeField] private BlockMovement[] allPlayerBlocks;
+    [SerializeField] private Transform _gameoverPanel;
 
+
+    private void Awake()
+    {
+        _gameoverPanel.gameObject.SetActive(false);
+    }
     void Start()
     {
+
         AllPlayerBlocksArrayUpdate();
         
     }
 
 
-
     void Update()
     {
-
+        AllPlayerBlocksArrayUpdate();
 
         if (allPlayerBlocks.Length == 0)
         {
+            _gameoverPanel.gameObject.SetActive(true);
+            Time.timeScale = 0;
             Debug.Log("gameover");
             return;
         }
