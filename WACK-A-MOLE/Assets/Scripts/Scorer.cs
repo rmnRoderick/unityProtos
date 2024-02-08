@@ -9,9 +9,15 @@ public class Scorer : MonoBehaviour
 
     void Update()
     {
+        if (!hasChildren)
+        {
+            return;
+        }
+
         if (transform.childCount == 0)
         {
             celebration.Play();
+            hasChildren = false;
         }
     }
 }
